@@ -2,3 +2,7 @@ package src.main.java.com.studentdata;
 
 import java.util.Scanner;
 
+public class Main {
+
+    // Name: Yashwith Behara , PRN: 23070126151, Batch:B3
+
