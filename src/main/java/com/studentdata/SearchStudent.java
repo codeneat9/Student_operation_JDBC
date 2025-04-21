@@ -12,3 +12,10 @@ public class SearchStudent {
 
         try (Connection conn = DatabaseConnection.getConnection()) {
             String query = "SELECT * FROM students WHERE prn LIKE ? OR name LIKE ? OR position LIKE ?";
+            PreparedStatement ps = conn.prepareStatement(query);
+            String pattern = "%" + searchQuery + "%";
+            ps.setString(1, pattern);
+            ps.setString(2, pattern);
+            ps.setString(3, pattern);
+            
+            ResultSet rs = ps.executeQuery();
