@@ -18,3 +18,8 @@ public class DisplayStudent {
                 System.out.println("-----------------------------------");
             }
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
