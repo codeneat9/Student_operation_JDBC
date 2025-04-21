@@ -29,3 +29,9 @@ public class AddStudent {
             ps.setString(3, batch);
             ps.setString(4, position);
 
+            // Executing the query
+            int rows = ps.executeUpdate();
+            if (rows > 0) {
+                System.out.println("Student added successfully!");
+            }sc.close();
+
