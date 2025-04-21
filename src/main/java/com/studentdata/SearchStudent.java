@@ -19,3 +19,11 @@ public class SearchStudent {
             ps.setString(3, pattern);
             
             ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                System.out.println("PRN: " + rs.getString("prn"));
+                System.out.println("Name: " + rs.getString("name"));
+                System.out.println("Batch: " + rs.getString("batch"));
+                System.out.println("Position: " + rs.getString("position"));
+                System.out.println("-----------------------------------");
+            }sc.close();
+
