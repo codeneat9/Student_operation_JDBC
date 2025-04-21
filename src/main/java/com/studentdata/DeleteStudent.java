@@ -5,3 +5,6 @@ import java.util.Scanner;
 
 public class DeleteStudent {
 
+    public static void deleteStudent() {
+        Scanner sc = new Scanner(System.in);
+
