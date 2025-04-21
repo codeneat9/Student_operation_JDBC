@@ -27,3 +27,8 @@ public class SearchStudent {
                 System.out.println("-----------------------------------");
             }sc.close();
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
