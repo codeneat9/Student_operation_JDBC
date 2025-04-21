@@ -35,3 +35,8 @@ public class AddStudent {
                 System.out.println("Student added successfully!");
             }sc.close();
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
