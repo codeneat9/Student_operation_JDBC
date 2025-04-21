@@ -17,3 +17,4 @@ public class Main {
             System.out.println("6. Exit");
 
             System.out.print("Enter choice: ");
+            int choice = sc.nextInt();
