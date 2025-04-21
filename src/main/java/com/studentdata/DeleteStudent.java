@@ -11,3 +11,8 @@ public class DeleteStudent {
         System.out.println("Enter PRN to delete: ");
         String prn = sc.nextLine();
 
+        try (Connection conn = DatabaseConnection.getConnection()) {
+            String query = "DELETE FROM students WHERE prn = ?";
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setString(1, prn);
+
