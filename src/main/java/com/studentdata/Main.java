@@ -18,3 +18,30 @@ public class Main {
 
             System.out.print("Enter choice: ");
             int choice = sc.nextInt();
+            sc.nextLine();  // Consume newline
+
+            switch (choice) {
+                case 1:
+                    AddStudent.addStudent();
+                    break;
+                case 2:
+                    DisplayStudent.displayStudents();
+                    break;
+                case 3:
+                    SearchStudent.searchStudent();
+                    break;
+                case 4:
+                    UpdateStudent.updateStudent();
+                    break;
+                case 5:
+                    DeleteStudent.deleteStudent();
+                    break;
+                case 6:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }sc.close();
+        }
+    }
+}
