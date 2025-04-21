@@ -27,3 +27,10 @@ public class UpdateStudent {
             ps.setString(3, position);
             ps.setString(4, prn);
 
+            int rows = ps.executeUpdate();
+            if (rows > 0) {
+                System.out.println("Student details updated successfully!");
+            } else {
+                System.out.println("No student found with that PRN.");
+            }sc.close();
+
