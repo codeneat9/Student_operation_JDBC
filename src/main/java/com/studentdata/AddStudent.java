@@ -18,3 +18,8 @@ public class AddStudent {
         System.out.println("Enter Position: ");
         String position = sc.nextLine();
 
+        // Connection to database
+        try (Connection conn = DatabaseConnection.getConnection()) {
+            String query = "INSERT INTO students (prn, name, batch, position) VALUES (?, ?, ?, ?)";
+            PreparedStatement ps = conn.prepareStatement(query);
+            
