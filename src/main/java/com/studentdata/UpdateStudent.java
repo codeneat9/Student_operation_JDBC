@@ -18,3 +18,6 @@ public class UpdateStudent {
         System.out.println("Enter new Position: ");
         String position = sc.nextLine();
 
+        try (Connection conn = DatabaseConnection.getConnection()) {
+            String query = "UPDATE students SET name = ?, batch = ?, position = ? WHERE prn = ?";
+            PreparedStatement ps = conn.prepareStatement(query);
