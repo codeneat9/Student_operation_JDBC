@@ -16,3 +16,10 @@ public class DeleteStudent {
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setString(1, prn);
 
+            int rows = ps.executeUpdate();
+            if (rows > 0) {
+                System.out.println("Student deleted successfully!");
+            } else {
+                System.out.println("No student found with that PRN.");
+            }sc.close();
+
