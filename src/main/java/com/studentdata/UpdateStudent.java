@@ -21,3 +21,9 @@ public class UpdateStudent {
         try (Connection conn = DatabaseConnection.getConnection()) {
             String query = "UPDATE students SET name = ?, batch = ?, position = ? WHERE prn = ?";
             PreparedStatement ps = conn.prepareStatement(query);
+            // Setting parameters for the query
+            ps.setString(1, name);
+            ps.setString(2, batch);
+            ps.setString(3, position);
+            ps.setString(4, prn);
+
