@@ -5,3 +5,6 @@ import java.util.Scanner;
 
 public class AddStudent {
 
+    public static void addStudent() {
+        Scanner sc = new Scanner(System.in);
+
