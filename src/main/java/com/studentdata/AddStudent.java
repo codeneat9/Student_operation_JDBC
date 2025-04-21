@@ -23,3 +23,9 @@ public class AddStudent {
             String query = "INSERT INTO students (prn, name, batch, position) VALUES (?, ?, ?, ?)";
             PreparedStatement ps = conn.prepareStatement(query);
             
+            // Setting parameters for the query
+            ps.setString(1, prn);
+            ps.setString(2, name);
+            ps.setString(3, batch);
+            ps.setString(4, position);
+
