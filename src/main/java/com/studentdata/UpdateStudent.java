@@ -34,3 +34,8 @@ public class UpdateStudent {
                 System.out.println("No student found with that PRN.");
             }sc.close();
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
