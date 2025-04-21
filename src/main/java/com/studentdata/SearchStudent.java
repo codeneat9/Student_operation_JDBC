@@ -10,3 +10,5 @@ public class SearchStudent {
         System.out.println("Enter PRN/Name/Position to search: ");
         String searchQuery = sc.nextLine();
 
+        try (Connection conn = DatabaseConnection.getConnection()) {
+            String query = "SELECT * FROM students WHERE prn LIKE ? OR name LIKE ? OR position LIKE ?";
